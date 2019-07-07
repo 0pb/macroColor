@@ -41,12 +41,9 @@ L_GREEN
 
 
 ## Future ##
-** What I plan to do in order** 
+### What I plan to do in order
 * Making this works with linux
 * More color and background
 * Working on implementing a way to use a macro inside an std::cout or printf (if possible)
 
-
 If by miracle someone use this, please don't hesitate to send me your views on that macro !
-=======
->>>>>>> 1c61ecf775481f7a784067d5c9e706bf3bcc2dfb
