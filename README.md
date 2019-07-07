@@ -1,13 +1,12 @@
 # macroColor
 simple header for colored output in c++
-<<<<<<< HEAD
 
 ## How it works ## 
 Small header which use macro to change color.
 
-** Features **
+### Features
 * 6 colors possibles : blu, green, cyan, red, yellow, white
-* Multi-line color (see "How to use" below or an [exemple](macroColor/exemple))
+* Multi-line color (see "How to use" below or an [exemple](https://github.com/0pb/macroColor/blob/master/exemple/exemple.cpp))
 * Nested color
 * Work with both std::cout and printf
 * Work on Windows only (linux not supported yet) - Tested on mingw, msys doesn't seem to accept color for some reason.
@@ -39,6 +38,9 @@ L_GREEN
 )
 ```
 
+
+The result of the exemple given in `exemple/` should show something like this : 
+![exemple](result.png)
 
 ## Future ##
 ### What I plan to do in order

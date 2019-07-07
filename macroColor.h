@@ -49,52 +49,52 @@
 	} while(0) ; 							
 
 
-#define L_BLU(stuff)												\
-	do {															\
-		int tempo = colorAbove;										\
-		BLU 														\
-		stuff														\
-		COLOR_ABOVE													\
+#define L_BLU(stuff)						\
+	do {									\
+		int tempo = colorAbove;				\
+		BLU 								\
+		stuff								\
+		COLOR_ABOVE							\
 	} while(0) ;
 
-#define L_GREEN(stuff)												\
-	do {															\
-		int tempo = colorAbove;										\
-		GREEN														\
-		stuff														\
-		COLOR_ABOVE													\
+#define L_GREEN(stuff)						\
+	do {									\
+		int tempo = colorAbove;				\
+		GREEN								\
+		stuff								\
+		COLOR_ABOVE							\
 	} while(0) ;
 
-#define L_CYAN(stuff)												\
-	do {															\
-		int tempo = colorAbove;										\
-		CYAN														\
-		stuff														\
-		COLOR_ABOVE													\
+#define L_CYAN(stuff)						\
+	do {									\
+		int tempo = colorAbove;				\
+		CYAN								\
+		stuff								\
+		COLOR_ABOVE							\
 	} while(0) ;
 
-#define L_RED(stuff)												\
-	do {															\
-		int tempo = colorAbove;										\
-		RED															\
-		stuff														\
-		COLOR_ABOVE													\
+#define L_RED(stuff)						\
+	do {									\
+		int tempo = colorAbove;				\
+		RED									\
+		stuff								\
+		COLOR_ABOVE							\
 	} while(0) ;
 
-#define L_YELLOW(stuff)												\
-	do {															\
-		int tempo = colorAbove;										\
-		YELLOW														\
-		stuff														\
-		COLOR_ABOVE													\
+#define L_YELLOW(stuff)						\
+	do {									\
+		int tempo = colorAbove;				\
+		YELLOW								\
+		stuff								\
+		COLOR_ABOVE							\
 	} while(0) ;
 
-#define L_WHITE(stuff)												\
-	do {															\
-		int tempo = colorAbove;										\
-		WHITE														\
-		stuff														\
-		COLOR_ABOVE													\
+#define L_WHITE(stuff)						\
+	do {									\
+		int tempo = colorAbove;				\
+		WHITE								\
+		stuff								\
+		COLOR_ABOVE							\
 	} while(0) ;
 
 #endif
