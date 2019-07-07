@@ -1,5 +1,6 @@
 # macroColor
 simple header for colored output in c++
+<<<<<<< HEAD
 
 ## How it works ## 
 Small header which use macro to change color.
@@ -47,3 +48,5 @@ L_GREEN
 
 
 If by miracle someone use this, please don't hesitate to send me your views on that macro !
+=======
+>>>>>>> 1c61ecf775481f7a784067d5c9e706bf3bcc2dfb
