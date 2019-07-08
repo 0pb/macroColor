@@ -20,13 +20,13 @@
 		#define YELLOW(stuff)	stuff
 		#define WHITE(stuff)	stuff
 	
-		#define C_BLU 			do {} while(0) ;
-		#define C_GREEN			do {} while(0) ;
-		#define C_CYAN			do {} while(0) ;
-		#define C_RED			do {} while(0) ;
-		#define C_MAGENTANULL	do {} while(0) ;
-		#define C_YELLOW		do {} while(0) ;
-		#define C_WHITE			do {} while(0) ;
+		#define C_BLU 			
+		#define C_GREEN			
+		#define C_CYAN			
+		#define C_RED			
+		#define C_MAGENTANULL	
+		#define C_YELLOW		
+		#define C_WHITE			
 			
 	#else
 		#if !defined(MSYS_COMP) && defined(_WIN32)
@@ -94,7 +94,7 @@
 				if(macroColor_tempo == 12) C_RED  	\
 				if(macroColor_tempo == 14) C_YELLOW \
 				if(macroColor_tempo == 15) C_WHITE  \
-			} while(0) ; 							
+			} while(0) 							
 		
 		
 		#define BLU(stuff)										\
@@ -102,56 +102,56 @@
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_BLU 											\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 		
 		#define GREEN(stuff)									\
 			do {												\
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_GREEN											\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 		
 		#define CYAN(stuff)										\
 			do {												\
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_CYAN											\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 		
 		#define RED(stuff)										\
 			do {												\
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_RED											\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 		
 		#define MAGENTA(stuff)									\
 			do {												\
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_MAGENTA										\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 
 		#define YELLOW(stuff)									\
 			do {												\
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_YELLOW										\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 		
 		#define WHITE(stuff)									\
 			do {												\
 				int macroColor_tempo = macroColor_colorAbove;	\
 				C_WHITE											\
 				stuff											\
-				COLOR_ABOVE										\
-			} while(0) ;
+				COLOR_ABOVE	;									\
+			} while(0) 
 	#endif
 #endif
 

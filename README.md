@@ -25,7 +25,7 @@ How to use the basic macro :
 GREEN
 (
 	std::cout << "show up as green" ; 
-)
+);
 ```
 Will show up in green.
 
@@ -39,9 +39,9 @@ GREEN
 	RED
 	(
 		std::cout << "2 - show up as red\n" ;	
-	) 
+	);
 	std::cout << "3 - show up as green\n" ;
-)
+);
 ```
 
 
