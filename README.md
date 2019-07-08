@@ -3,8 +3,8 @@ simple header for colored output in c++
 
 ## How it works ## 
 Small header which include macro.
-Use `#include <windows.h>` for `SetConsoleTextAttribute` on Windows 
-Use `#include <stdio.h> #include <iostream>` for `std::cout` on Linux
+Use `#include <windows.h>` for `SetConsoleTextAttribute` on Windows.
+Use `#include <stdio.h> #include <iostream>` for `std::cout` on Linux.
 
 
 ### Features
@@ -70,11 +70,11 @@ Like so :
 #define MSYS_COMP
 #include "macroColor.h"
 ```
-If you wish to come back, simply delete the `#define MSYS_COMP`.
+If you wish to get your color back, simply delete the `#define MSYS_COMP` or comment it out with //
 
 ## Future ##
 ### What I plan to do in order
 * More color and background
-* Working on implementing a way to use a macro inside an std::cout or printf (if possible)
+* Implementing a macro that resolve the issue mentionned above
 
 If by miracle someone use this, please don't hesitate to send me your opinion on macroColor !
