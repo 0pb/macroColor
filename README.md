@@ -1,11 +1,12 @@
 # macroColor
-simple header for colored output for c and c++
+Short header for colored output in c and c++
 
 ## How it works ## 
 Small header which include macro.
-Use `#include <windows.h>` for `SetConsoleTextAttribute` on Windows.
-Use `#include <stdio.h> #include <iostream>` for `std::cout` on Linux.
-
+It use :
+* `#include <windows.h>` for `SetConsoleTextAttribute` on Windows.
+* `#include <iostream>` for `std::cout` on Linux (c++).
+* `#include <stdio.h>` for `printf()` on Linux (c).
 
 ### Features
 * 7 colors possibles : blu, green, cyan, red, magenta, yellow, white

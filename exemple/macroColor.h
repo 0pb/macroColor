@@ -68,7 +68,6 @@
 
 			//work for cplusplus
 			#ifdef __cplusplus 
-				#include <stdio.h> 
 				#include <iostream>  
 				#define COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(COLORMACRO_SETCOLOR) std::cout << COLORMACRO_SETCOLOR ; 
 
