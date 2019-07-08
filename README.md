@@ -8,11 +8,12 @@ Use `#include <stdio.h> #include <iostream>` for `std::cout` on Linux.
 
 
 ### Features
-* 6 colors possibles : blu, green, cyan, red, yellow, white
+* 7 colors possibles : blu, green, cyan, red, magenta, yellow, white
+* It work with both C and C++ (with the same header)
 * Multi-line color (see "How to use" below or an [exemple](https://github.com/0pb/macroColor/blob/master/exemple/exemple.cpp))
 * Nested color
-* Work with std::cout
-* Tested and working on : Windows Seven, Linux Mint, Msys2 with both mingw32 and 64
+* It work with both std::cout and printf
+* Tested and working : Windows Seven mingw, Linux Mint, Windows Seven Msys2 with both mingw32 and 64 (if you use the MSYS_COMP define)
 * You can easily remove the color in compilation with `#define REMOVE_COLOR`
 
 ## How to use ##
@@ -27,7 +28,7 @@ GREEN
 ```
 Will show up in green.
 
-The 6 color are : `GREEN BLU CYAN RED YELLOW WHITE`
+The 7 color are : `GREEN BLU CYAN RED MAGENTA YELLOW WHITE`
 
 To use nested color : 
 ```bash
@@ -57,7 +58,6 @@ The result of the exemple given in `exemple/` should show something like this :
 
 ![exemple](result.png)
 
-
 ## Issues ##
 
 Because the macro uses a `do { } while(0) ;`, it mean any variable, function, etc. declared in the macro will create an error if you try to use it outside of its scope.
@@ -74,7 +74,7 @@ If you wish to get your color back, simply delete the `#define MSYS_COMP` or com
 
 ## Future ##
 ### What I plan to do in order
-* More color and background
+* Maybe background
 * Implementing a macro that resolve the issue mentionned above
 
 If by miracle someone use this, please don't hesitate to send me your opinion on macroColor !
