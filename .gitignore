@@ -1,0 +1,8 @@
+# ignore LICENSE
+LICENSE
+
+# ignore result
+*.png
+
+# ignore my main, etc
+*.exe
