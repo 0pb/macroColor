@@ -1,4 +1,5 @@
 
+//#define REMOVE_COLOR
 //#define MSYS_COMP
 #include "macroColor.h" 
 #include <stdio.h> 
@@ -7,84 +8,69 @@
 
 int main( int argc, char* args[] )
 {
-
-	std::string message = "TEST" ; 
-
 	//Test of all 6 colors
-	L_GREEN
+	GREEN
 	(
-		std::cout << "[" << message << "]\n" ; 
+		std::cout << "\n[green]\n" ; 
 	)
 
-	L_BLU
+	BLU
 	(
-		std::cout << "[" << message << "]\n" ; 
+		std::cout << "[blu]\n" ; 
 	)
 
-	L_CYAN
-	(
-		std::cout << "[" << message << "]\n" ; 
-		int i = 0 ; 
-		//whatever you want to write
-		std::cout << "i + 1 = " << i + 1 << "\n" ; 
-	)	
-	
-	L_RED
-	(
-		std::cout << "[" << message << "]\n" ; 
-	)	
+	//test if else statement
+	int g = 1 ; 
+	if(g > 0) 
+	{
+		CYAN
+		(
+			std::cout << "[cyan]\n" ; 
+			int i = 0 ; 
+			std::cout << "i + 1 = " << i + 1 << "\n" ; 
+		)	 
+	}
+	else
+	{
+		RED
+		(
+			std::cout << "[red]\n" ; 
+		)	
+	}
 
-	L_YELLOW
+	YELLOW
 	(
-		std::cout << "[" << message << "]\n" ; 
+		std::cout << "[yellow]\n" ; 
 	)		
 
-	L_WHITE
+	WHITE
 	(
-		std::cout << "[" << message << "]\n" ; 
+		std::cout << "[white]\n" ; 
 	)	
 
 	//Test nested color
-	L_YELLOW
+	YELLOW
 	(
-		std::cout << "[" ; 
-		L_RED
+		std::cout << "[yellow" ; 
+		RED
 		(
-			std::cout << "[" ;
-			std::cout << message ;
-			L_BLU
+			std::cout << "[red" ;
+			BLU
 			(
-				std::cout << "[" ;
-				std::cout << message ; 
-				std::cout << "]" ;
+				std::cout << "[blu]" ;
 			)
 			std::cout << "]" ;
 		)
 		std::cout << "]\n"; 
 	)
 
+	//use directly the color macro, remember it doesn't automatically back to white, so you have to put C_WHITE or it stay in yellow
+	C_YELLOW
+	std::cout << "Yellow without white afterward\n" ; 
+	int abc = 0 ; 
+	std::cout << abc << "\n" ; 
+	std::cout << "Still yellow\n" ; 
+	C_WHITE
+
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
