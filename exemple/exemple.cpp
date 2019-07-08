@@ -1,3 +1,5 @@
+
+//#define MSYS_COMP
 #include "macroColor.h" 
 #include <stdio.h> 
 #include <iostream> 
@@ -63,3 +65,26 @@ int main( int argc, char* args[] )
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

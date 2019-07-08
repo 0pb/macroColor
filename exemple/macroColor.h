@@ -10,11 +10,26 @@
 
 #ifndef macroColor_h
 
-#ifdef _WIN32
-	#include <windows.h>
+//Add compatibility to msys
+//use #define MSYS_COMP before #include "macroColor.h" if you want to use the color in msys
+#if defined(MSYS_COMP)
+	#include <stdio.h> 
 	int colorAbove = 15 ;
 	int tempoColor = 15 ;  
+	#include <iostream> 
 
+    #define BLU	        std::cout << "\e[0;34m" ; 	colorAbove = 9 ;
+    #define GREEN       std::cout << "\e[0;32m" ; 	colorAbove = 10;
+    #define CYAN        std::cout << "\e[0;36m" ; 	colorAbove = 11;
+    #define RED         std::cout << "\e[0;31m" ; 	colorAbove = 12;
+    #define YELLOW      std::cout << "\e[0;33m" ; 	colorAbove = 14;
+    #define WHITE		std::cout << "\e[1;37m" ; 	colorAbove = 15;
+#endif
+
+#if !defined(MSYS_COMP) && defined(_WIN32) 
+	#include <windows.h>
+	int colorAbove = 15 ;
+	int tempoColor = 15 ; 
 	#define BLU 	SetConsoleTextAttribute(hConsole, 9) ; 	colorAbove = 9 ;
 	#define GREEN 	SetConsoleTextAttribute(hConsole, 10); 	colorAbove = 10;
 	#define CYAN 	SetConsoleTextAttribute(hConsole, 11); 	colorAbove = 11;
@@ -25,18 +40,19 @@
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 #endif
 
-/*TODO LINUX VERSION
 #ifdef unix
-
-    #define BLU	        stream << "\e[0;34m" ;
-    #define GREEN       stream << "\e[0;32m" ;
-    #define CYAN        stream << "\e[0;36m" ;
-    #define RED         stream << "\e[0;31m" ;
-    #define YELLOW      stream << "\e[0;33m" ;
-    #define WHITE		stream << "\e[1;37m" ;
+	#include <stdio.h> 
+	int colorAbove = 15 ;
+	int tempoColor = 15 ;  
+	#include <iostream>  
+    #define BLU	        std::cout << "\e[0;34m" ; 	colorAbove = 9 ;
+    #define GREEN       std::cout << "\e[0;32m" ; 	colorAbove = 10;
+    #define CYAN        std::cout << "\e[0;36m" ; 	colorAbove = 11;
+    #define RED         std::cout << "\e[0;31m" ; 	colorAbove = 12;
+    #define YELLOW      std::cout << "\e[0;33m" ; 	colorAbove = 14;
+    #define WHITE		std::cout << "\e[1;37m" ; 	colorAbove = 15;
 
 #endif
-*/
 
 #define COLOR_ABOVE							\
 	do {									\
@@ -98,3 +114,5 @@
 	} while(0) ;
 
 #endif
+
+#undef MSYS_COMP
