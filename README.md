@@ -1,5 +1,5 @@
 # macroColor
-simple header for colored output in c++
+simple header for colored output for c and c++
 
 ## How it works ## 
 Small header which include macro.
