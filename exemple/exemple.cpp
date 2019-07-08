@@ -12,12 +12,12 @@ int main( int argc, char* args[] )
 	GREEN
 	(
 		std::cout << "\n[green]\n" ; 
-	)
+	);
 
 	BLU
 	(
 		std::cout << "[blu]\n" ; 
-	)
+	);
 
 	//test if else statement
 	int g = 1 ; 
@@ -28,25 +28,25 @@ int main( int argc, char* args[] )
 			std::cout << "[cyan]\n" ; 
 			int i = 0 ; 
 			std::cout << "i + 1 = " << i + 1 << "\n" ; 
-		)	 
+		); 
 	}
 	else
 	{
 		RED
 		(
 			std::cout << "[red]\n" ; 
-		)	
+		);
 	}
 
 	YELLOW
 	(
 		std::cout << "[yellow]\n" ; 
-	)		
+	);		
 
 	WHITE
 	(
 		std::cout << "[white]\n" ; 
-	)	
+	);	
 
 	//Test nested color
 	YELLOW
@@ -58,11 +58,11 @@ int main( int argc, char* args[] )
 			BLU
 			(
 				std::cout << "[blu]" ;
-			)
+			);
 			std::cout << "]" ;
-		)
+		);
 		std::cout << "]\n"; 
-	)
+	);
 
 	//use directly the color macro, remember it doesn't automatically back to white, so you have to put C_WHITE or it stay in yellow
 	C_YELLOW
