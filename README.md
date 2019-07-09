@@ -5,7 +5,6 @@ Short header for colored output in c and c++
 Small header which include macro.
 It use :
 * `#include <windows.h>` for `SetConsoleTextAttribute` on Windows.
-* `#include <iostream>` for `std::cout` on Linux (c++).
 * `#include <stdio.h>` for `printf()` on Linux (c).
 
 ### Features
@@ -18,7 +17,8 @@ It use :
 * You can easily remove the color in compilation with `#define REMOVE_COLOR`
 
 ## How to use ##
-Simply drop the header file "macroColor" in your directory, then insert `#include "macroColor.h"` in your .cpp file.
+Simply drop the header file "macroColor.h" and the c file "macroColor.c" in your directory, then insert `#include "macroColor.h"` in your .cpp file.
+Finally add macroColor.c in your option of compilation (ex: `g++ main.c macroColor.c -o main`)
 
 How to use the basic macro : 
 ```bash
@@ -42,17 +42,6 @@ GREEN
 	);
 	std::cout << "3 - show up as green\n" ;
 );
-```
-
-
-You can also use directly the color macro with `C_GREEN C_BLU etc.` however it won't revert back to white automatically.
-```bash
-C_YELLOW
-std::cout << "Yellow without white afterward\n" ; 
-int abc = 0 ; 
-std::cout << abc << "\n" ; 
-std::cout << "Still yellow\n" ; 
-C_WHITE
 ```
 
 The result of the exemple given in `exemple/` should show something like this : 

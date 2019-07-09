@@ -6,4 +6,4 @@ LICENSE
 
 # ignore my main, etc
 *.exe
-exemple.cpp
+*.gitignore
