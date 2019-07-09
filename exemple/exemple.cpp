@@ -1,6 +1,6 @@
 
 //#define REMOVE_COLOR
-#define MSYS_COMP
+//#define MSYS_COMP
 #include "macroColor.h" 
 #include <stdio.h> 
 #include <iostream> 
@@ -20,8 +20,7 @@ int main( int argc, char* args[] )
 	);
 
 	//test if else statement
-	int g = 1 ; 
-	if(g > 0) 
+	if(true) 
 	{
 		CYAN
 		(
@@ -64,6 +63,7 @@ int main( int argc, char* args[] )
 		std::cout << "]\n"; 
 	);
 
+	/*
 	//use directly the color macro, remember it doesn't automatically back to white, so you have to put C_WHITE or it stay in yellow
 	C_YELLOW
 	std::cout << "Yellow without white afterward\n" ; 
@@ -71,6 +71,6 @@ int main( int argc, char* args[] )
 	std::cout << abc << "\n" ; 
 	std::cout << "Still yellow\n" ; 
 	C_WHITE
-
+	*/
 	return 0;
 }
