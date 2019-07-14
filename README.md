@@ -1,4 +1,4 @@
-# macroColor
+# macroColor function_refactor Branch
 Short header for colored output in c and c++
 
 ## How it works ## 
@@ -6,6 +6,7 @@ Small header which include macro.
 It use :
 * `#include <windows.h>` for `SetConsoleTextAttribute` on Windows.
 * `#include <stdio.h>` for `printf()` on Linux (c).
+* `#include <unistd.h> #include <curses.h> #include <term.h>` for tinfo in Linux.
 
 ### Features
 * 7 colors possibles : blu, green, cyan, red, magenta, yellow, white
@@ -16,9 +17,16 @@ It use :
 * Tested and working : Windows Seven mingw, Linux Mint, Windows Seven Msys2 with both mingw32 and 64 (if you use the MSYS_COMP define)
 * You can easily remove the color in compilation with `#define REMOVE_COLOR`
 
+## File to select ##
+`macroColor.c` and `macroColor.h` for windows or linux without Tinfo stuff (in case you don't want it).
+`macroColorTinfo.c` and `macroColorTinfo.h` for windows or linux with Tinfo, it require curses.
+
 ## How to use ##
-Simply drop the header file "macroColor.h" and the c file "macroColor.c" in your directory, then insert `#include "macroColor.h"` in your .cpp file.
-Finally add macroColor.c in your option of compilation (ex: `g++ main.c macroColor.c -o main`)
+
+Select the file you want (Tinfo or not), then drop the .c and .h in your directory.
+Then, add `#include "macroColor.h"` or `#include "macroColorTinfo.h"` in your main .c
+Finally, add the .c as option in your compilator as well as the library -ltinfo.
+As an exemple : `gcc exemplec.c macroColorTinfo.c -ltinfo -o exemplec`
 
 How to use the basic macro : 
 ```bash
@@ -61,6 +69,16 @@ Like so :
 #include "macroColor.h"
 ```
 If you wish to get your color back, simply delete the `#define MSYS_COMP` or comment it out with //
+
+### Forcing AINSI color instead of Tinfo (for Tinfo user only) ###
+
+Remove or comment out the `#define MACROCOLOR_TERMCAP` in the beginning of macroColorTinfo.c, it will use regular AINSI color if you are on Linux
+
+### Forcing Tinfo on Windows (for Tinfo user only) ###
+
+It obviously require curse, term and unistd on Windows.
+Remove the // before `#define MSYS_COMP` in the beginning of macroColorTinfo.c
+MACROCOLOR_TERMCAP need to be defined too or else it will only use AINSI color.
 
 ## Future ##
 ### What I plan to do in order
