@@ -10,23 +10,32 @@
 #define MACROCOLOR_H
 	/******************************************************************/
 	#include <stdio.h>
+    #include <unistd.h>
+    #include <curses.h>
+    #include <term.h>
 	#if !defined(MSYS_COMP) && defined(_WIN32)
 		#include <windows.h>
-		#define MC_COLOR_WINDOW 1			
+		#define mC_COLOR_WINDOW 1			
 		//work for cplusplus
 		#ifdef __cplusplus 
-			#define MC_COLOR_CPP HANDLE hConsole
+			#define mC_COLOR_CPP HANDLE hConsole
 		//work for c
 		#else  			
-			#define MC_COLOR_CPP HANDLE *hConsole
+			#define mC_COLOR_CPP HANDLE *hConsole
 		#endif	
+		int setColorWindow(int colorNumber, mC_COLOR_CPP);	
 	#endif
 	//Add compatibility to msys
 	//use #define MSYS_COMP before #include "macroColor.h" if you want to use the color in msys
 	#if defined(MSYS_COMP) || defined(unix)
+		#if defined(MACROCOLOR_TERMCAP) 
+			#define MC_SETCOLOR_TERMCAP 1 		
+		#else
+			#define MC_SETCOLOR_TERMCAP 0
+		#endif
+			void setColorAinsi(int colorNumber);
+			void setColorTcap(int colorNumber);
 	#endif
-		int setColorWindow(int colorNumber, MC_COLOR_CPP);	
-		void setColorAinsi(int colorNumber);
 	/******************************************************************/	
 	//if you want to remove the color
 	#ifdef REMOVE_COLOR 

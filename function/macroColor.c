@@ -6,7 +6,7 @@ int macroColor_colorAbove = 15 ;
 int setColor(int colorNumber) 
 {
 	//Window part
-	if(mC_COLOR_WINDOW) {
+	if(MC_COLOR_WINDOW) {
 		HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		setColorWindow(colorNumber, hConsole);
 	}
@@ -15,7 +15,7 @@ int setColor(int colorNumber)
 	return colorNumber ; 
 }
 
-int setColorWindow(int colorNumber, mC_COLOR_CPP)
+int setColorWindow(int colorNumber, MC_COLOR_CPP)
 //mC_COLOR_CPP is HANDLE *hConsole or HANDLE hConsole (c++ or c accordingly)
 {
    	SetConsoleTextAttribute(hConsole, colorNumber);
