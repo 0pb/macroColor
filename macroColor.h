@@ -12,10 +12,10 @@
 	
 	//if you want to remove the color
 	#ifdef REMOVE_COLOR 
-		#define BLU(stuff) 		stuff	
+		#define BLU(stuff) 	stuff	
 		#define GREEN(stuff)	stuff	
-		#define CYAN(stuff)		stuff
-		#define RED(stuff)		stuff
+		#define CYAN(stuff)	stuff
+		#define RED(stuff)	stuff
 		#define MAGENTA(stuff)	stuff
 		#define YELLOW(stuff)	stuff
 		#define WHITE(stuff)	stuff
@@ -24,7 +24,7 @@
 		#define C_GREEN			
 		#define C_CYAN			
 		#define C_RED			
-		#define C_MAGENTANULL	
+		#define C_MAGENTA
 		#define C_YELLOW		
 		#define C_WHITE			
 			
@@ -50,12 +50,12 @@
 				#define COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(COLORMACRO_SETCOLOR) test(COLORMACRO_SETCOLOR); 
 			#endif
 	
-			#define C_BLU 		COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(9) 	macroColor_colorAbove = 9 ;
+			#define C_BLU 		COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(9)  macroColor_colorAbove = 9 ;
 			#define C_GREEN 	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(10) macroColor_colorAbove = 10;
 			#define C_CYAN 		COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(11) macroColor_colorAbove = 11;
 			#define C_RED 		COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(12) macroColor_colorAbove = 12;
 			#define C_MAGENTA	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(13) macroColor_colorAbove = 13;
-			#define C_YELLOW 	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(14)	macroColor_colorAbove = 14;
+			#define C_YELLOW 	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(14) macroColor_colorAbove = 14;
 			#define C_WHITE 	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(15) macroColor_colorAbove = 15;
 	
 		#endif
@@ -77,80 +77,80 @@
 				#define COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(COLORMACRO_SETCOLOR) printf(COLORMACRO_SETCOLOR) ; 
 			#endif
 
-		    #define C_BLU	    COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;34m")	macroColor_colorAbove = 9 ;
+		    #define C_BLU	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;34m")	macroColor_colorAbove = 9 ;
 		    #define C_GREEN     COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;32m")	macroColor_colorAbove = 10;
 		    #define C_CYAN      COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;36m")	macroColor_colorAbove = 11;
 		    #define C_RED       COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;31m")	macroColor_colorAbove = 12;
-			#define C_MAGENTA	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;35m")	macroColor_colorAbove = 13;
+		    #define C_MAGENTA	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;35m")	macroColor_colorAbove = 13;
 		    #define C_YELLOW    COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[0;33m")	macroColor_colorAbove = 14;
-		    #define C_WHITE		COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[1;37m")	macroColor_colorAbove = 15;
+		    #define C_WHITE	COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE("\e[1;37m")	macroColor_colorAbove = 15;
 		#endif
 
-		#define COLOR_ABOVE							\
-			do {									\
+		#define COLOR_ABOVE					\
+			do {						\
 				if(macroColor_tempo == 9)  C_BLU  	\
-				if(macroColor_tempo == 10) C_GREEN  \
+				if(macroColor_tempo == 10) C_GREEN  	\
 				if(macroColor_tempo == 11) C_CYAN  	\
 				if(macroColor_tempo == 12) C_RED  	\
-				if(macroColor_tempo == 14) C_YELLOW \
-				if(macroColor_tempo == 15) C_WHITE  \
+				if(macroColor_tempo == 14) C_YELLOW 	\
+				if(macroColor_tempo == 15) C_WHITE  	\
 			} while(0) 							
 		
 		
-		#define BLU(stuff)										\
-			do {												\
+		#define BLU(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_BLU 											\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_BLU 						\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 		
-		#define GREEN(stuff)									\
-			do {												\
+		#define GREEN(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_GREEN											\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_GREEN						\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 		
-		#define CYAN(stuff)										\
-			do {												\
+		#define CYAN(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_CYAN											\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_CYAN						\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 		
-		#define RED(stuff)										\
-			do {												\
+		#define RED(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_RED											\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_RED						\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 		
-		#define MAGENTA(stuff)									\
-			do {												\
+		#define MAGENTA(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_MAGENTA										\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_MAGENTA					\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 
-		#define YELLOW(stuff)									\
-			do {												\
+		#define YELLOW(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_YELLOW										\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_YELLOW					\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 		
-		#define WHITE(stuff)									\
-			do {												\
+		#define WHITE(stuff)						\
+			do {							\
 				int macroColor_tempo = macroColor_colorAbove;	\
-				C_WHITE											\
-				stuff											\
-				COLOR_ABOVE	;									\
+				C_WHITE						\
+				stuff						\
+				COLOR_ABOVE	;				\
 			} while(0) 
 	#endif
 #endif
