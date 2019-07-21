@@ -61,7 +61,6 @@ int main( int argc, char* args[] )
 		printf("]\n"); 
 	);
 
-	/*
 	//use directly the color macro, remember it doesn't automatically back to white, so you have to put C_WHITE or it stay in yellow
 	C_YELLOW 
 	printf("Yellow without white afterward\n");
@@ -69,6 +68,6 @@ int main( int argc, char* args[] )
 	printf("%i\n", abc);
 	printf("Yellow without white afterward\n") ; 
 	C_WHITE
-	*/
+
 	return 0 ; 
 }

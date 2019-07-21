@@ -13,17 +13,9 @@
     #include <unistd.h>
     #include <curses.h>
     #include <term.h>
-	#if !defined(MSYS_COMP) && defined(_WIN32)
-		#include <windows.h>
-		#define mC_COLOR_WINDOW 1			
-		//work for cplusplus
-		#ifdef __cplusplus 
-			#define mC_COLOR_CPP HANDLE hConsole
-		//work for c
-		#else  			
-			#define mC_COLOR_CPP HANDLE *hConsole
-		#endif	
-		int setColorWindow(int colorNumber, mC_COLOR_CPP);	
+	#if !defined(MSYS_COMP) && defined(_WIN32)	
+		//if you need to use regular color instead of tcap/AINSI on windows, use the macroColor.h file instead of macroColorTinfo.h
+		//if and endif stay as warning
 	#endif
 	//Add compatibility to msys
 	//use #define MSYS_COMP before #include "macroColor.h" if you want to use the color in msys
@@ -46,12 +38,27 @@
 		#define MAGENTA(stuff)	stuff
 		#define YELLOW(stuff)	stuff
 		#define WHITE(stuff)	stuff
+		#define C_BLU 			
+		#define C_GREEN			
+		#define C_CYAN			
+		#define C_RED			
+		#define C_MAGENTA	
+		#define C_YELLOW		
+		#define C_WHITE		
 	#else
 		/******************************************************************/
 		int setColor(int colorNumber);
 		//extern needed or nested color won't work
 		extern int macroColor_colorAbove;	
-		/******************************************************************/
+		/******************************************************************/		
+		#define C_BLU 		setColor(9);
+		#define C_GREEN		setColor(10);
+		#define C_CYAN		setColor(11);
+		#define C_RED		setColor(12);
+		#define C_MAGENTA 	setColor(13);
+		#define C_YELLOW	setColor(14);
+		#define C_WHITE		setColor(15);	
+		
 		#define BLU(stuff) 											\
 			do {													\
 				int macroColor_Tempo = macroColor_colorAbove ;		\

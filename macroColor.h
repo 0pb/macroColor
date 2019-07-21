@@ -37,12 +37,19 @@
 		#define MAGENTA(stuff)	stuff
 		#define YELLOW(stuff)	stuff
 		#define WHITE(stuff)	stuff
+		#define C_BLU 			
+		#define C_GREEN			
+		#define C_CYAN			
+		#define C_RED			
+		#define C_MAGENTA	
+		#define C_YELLOW		
+		#define C_WHITE		
 	#else
 		/******************************************************************/
 		int setColor(int colorNumber);
 		//extern needed or nested color won't work
 		extern int macroColor_colorAbove;	
-		/******************************************************************/
+		/******************************************************************/		
 		#define BLU(stuff) 											\
 			do {													\
 				int macroColor_Tempo = macroColor_colorAbove ;		\
@@ -91,7 +98,16 @@
 				macroColor_colorAbove = setColor(15) ;				\
 				stuff												\
 				setColor(macroColor_Tempo);							\
-			} while(0)												
+			} while(0)					
+	
+		#define C_BLU 		setColor(9);
+		#define C_GREEN		setColor(10);
+		#define C_CYAN		setColor(11);
+		#define C_RED		setColor(12);
+		#define C_MAGENTA 	setColor(13);
+		#define C_YELLOW	setColor(14);
+		#define C_WHITE		setColor(15);
+				
 	#endif
 #endif
 #undef MACROCOLOR_TERMCAP
