@@ -1,6 +1,6 @@
 
 //#define REMOVE_COLOR
-#define MSYS_COMP
+//#define MSYS_COMP
 #include "macroColor.h" 
 #include <stdio.h> 
 #include <iostream> 

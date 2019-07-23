@@ -42,12 +42,12 @@
 			//work for c
 			#else  			
 				//that part need to be in a function to work
-				void test(int i) 
+				void macroColor_SCTA(int i) 
 				{
 					HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
    					SetConsoleTextAttribute(hConsole, i);
   				}
-				#define COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(COLORMACRO_SETCOLOR) test(COLORMACRO_SETCOLOR); 
+				#define COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(COLORMACRO_SETCOLOR) macroColor_SCTA(COLORMACRO_SETCOLOR); 
 			#endif
 	
 			#define C_BLU 		COLORMACRO_COLORMACRO_SETCOLORATTRIBUTE(9) 	macroColor_colorAbove = 9 ;
